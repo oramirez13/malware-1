@@ -1,0 +1,410 @@
+<!doctype html>
+<!-- Declaracion del tipo de documento: indica al navegador que es HTML5 -->
+
+<html lang="en">
+  <!-- Etiqueta raiz del documento. lang="en" indica que el contenido esta en ingles -->
+
+  <head>
+    <!-- Seccion de metadatos: configura el documento, no visible para el usuario -->
+
+    <meta charset="UTF-8" />
+    <!-- Define la codificacion de caracteres UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace la pagina responsiva para cualquier pantalla -->
+
+    <title>NovaBank - What is Phishing?</title>
+    <!-- Titulo en la pestana del navegador -->
+
+    <!--Bootstrap/css-->
+    <!-- Bootstrap 4 desde CDN con verificacion de integridad -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- integrity = hash criptografico que verifica que el archivo no fue alterado -->
+    <!-- crossorigin="anonymous" = permite la verificacion de integridad en recursos externos -->
+
+    <!--css/style.css-->
+    <!-- Hoja de estilos propia, cargada despues de Bootstrap para tener prioridad -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Cuerpo del documento: todo lo visible para el usuario -->
+
+    <!-- ================================================
+         NAVBAR — Barra de navegacion superior
+         La misma estructura que en index.html para coherencia visual
+         ================================================ -->
+    <nav class="navbar navbar-dark novabank-navbar">
+      <!-- navbar-dark = iconos y texto claro para fondos oscuros -->
+      <!-- novabank-navbar = clase propia con el color del banco ficticio -->
+
+      <div class="container">
+        <!-- container = centra y limita el ancho del contenido -->
+
+        <a class="navbar-brand font-weight-bold" href="index.html">
+          <!-- navbar-brand = estilo Bootstrap para el logo -->
+          <!-- font-weight-bold = negrita en Bootstrap 4 -->
+          <!-- href="index.html" = enlace que regresa a la pagina de phishing -->
+          NovaBank
+        </a>
+
+        <span class="navbar-text text-white-50 small">
+          <!-- navbar-text = texto alineado en el navbar -->
+          Security Awareness Center
+        </span>
+      </div>
+      <!-- Fin del container -->
+    </nav>
+    <!-- Fin del navbar -->
+
+    <!-- ================================================
+         HEADER — Encabezado de la pagina del blog
+         Seccion visual grande que introduce el articulo
+         ================================================ -->
+    <header class="blog-hero text-white text-center py-5">
+      <!-- blog-hero = clase propia para el encabezado grande del blog -->
+      <!-- text-white = texto blanco -->
+      <!-- text-center = texto centrado -->
+      <!-- py-5 = padding vertical muy grande -->
+
+      <div class="container">
+        <span class="badge badge-danger mb-3">Educational Article</span>
+        <!-- badge = componente Bootstrap 4 para etiquetas pequenas redondeadas -->
+        <!-- badge-danger = variante roja (Bootstrap 4 usa badge-danger, no bg-danger) -->
+        <!-- mb-3 = margin-bottom mediano -->
+
+        <h1 class="display-5 font-weight-bold">What is Phishing?</h1>
+        <!-- display-5 = tamano de fuente grande de Bootstrap (estilo "display") -->
+        <!-- font-weight-bold = negrita en Bootstrap 4 -->
+
+        <p class="lead mt-3 mb-0">
+          <!-- lead = clase Bootstrap para parrafos introductorios mas grandes -->
+          <!-- mt-3 = margin-top mediano | mb-0 = sin margin-bottom -->
+          How cybercriminals trick you into giving away your personal
+          information and how to protect yourself.
+        </p>
+      </div>
+      <!-- Fin del container del header -->
+    </header>
+    <!-- Fin del header -->
+
+    <!-- ================================================
+         MAIN — Contenido principal: el articulo educativo
+         ================================================ -->
+    <main class="container my-5">
+      <!-- container = centra y limita el ancho -->
+      <!-- my-5 = margin vertical grande -->
+
+      <div class="row justify-content-center">
+        <!-- row = fila del sistema de grilla Bootstrap -->
+        <!-- justify-content-center = centra las columnas horizontalmente -->
+
+        <div class="col-12 col-md-10 col-lg-8">
+          <!-- Sistema responsivo:
+               col-12 = 100% en pantallas pequenas
+               col-md-10 = 83% en pantallas medianas
+               col-lg-8 = 66% en pantallas grandes (formato articulo) -->
+
+          <!-- SECCION 1: Definicion -->
+          <section class="mb-5">
+            <!-- section = etiqueta semantica HTML5 para secciones de contenido -->
+            <!-- mb-5 = margin-bottom grande para separar secciones -->
+
+            <h2 class="blog-section-title">What is Phishing?</h2>
+            <!-- blog-section-title = clase propia definida en style.css -->
+
+            <p>
+              <strong>Phishing</strong> is a type of cyberattack where criminals
+              impersonate trusted organizations — banks, tech companies, or
+              government agencies — to trick victims into revealing sensitive
+              information such as passwords, credit card numbers, or personal
+              identification data.
+            </p>
+
+            <p>
+              The word "phishing" is a play on "fishing": attackers cast a wide
+              net with mass emails or fake websites and wait for victims to take
+              the bait.
+            </p>
+          </section>
+          <!-- Fin de la seccion 1 -->
+
+          <!-- SECCION 2: Como funciona -->
+          <section class="mb-5">
+            <h2 class="blog-section-title">How Does It Work?</h2>
+
+            <p>A typical phishing attack follows these steps:</p>
+
+            <!-- Lista numerada con estilos de Bootstrap 4 -->
+            <ol class="list-group list-group-flush mb-3">
+              <!-- ol = lista ordenada (numerada) en HTML -->
+              <!-- list-group = componente Bootstrap para listas con estilo -->
+              <!-- list-group-flush = variante sin bordes externos (Bootstrap 4) -->
+
+              <li class="list-group-item">
+                <!-- list-group-item = cada elemento de la lista Bootstrap -->
+                <strong>1. Crafting the bait:</strong> The attacker creates a
+                fake email or website that looks identical to a legitimate one.
+              </li>
+
+              <li class="list-group-item">
+                <strong>2. Sending the hook:</strong> The victim receives an
+                urgent message — "Your account has been suspended!",
+                "Unauthorized access detected!" — designed to cause panic and
+                bypass critical thinking.
+              </li>
+
+              <li class="list-group-item">
+                <strong>3. The trap:</strong> The victim clicks a link or
+                downloads a file, leading them to a fake page or installing
+                malware on their device.
+              </li>
+
+              <li class="list-group-item">
+                <strong>4. Data theft:</strong> Credentials, financial data, or
+                system access are captured by the attacker.
+              </li>
+            </ol>
+            <!-- Fin de la lista numerada -->
+
+            <!-- Nota informativa usando el componente alert de Bootstrap -->
+            <div class="alert alert-info" role="alert">
+              <!-- alert-info = variante azul de la alerta Bootstrap (informacion) -->
+              <strong>Did you notice?</strong> The page you just came from (<a
+                href="index.html"
+                class="alert-link"
+                >index.html</a
+              >) is an example of steps 1 and 2 — a realistic-looking fake bank
+              alert designed to create urgency.
+              <!-- alert-link = clase Bootstrap para enlaces dentro de alertas -->
+            </div>
+          </section>
+          <!-- Fin de la seccion 2 -->
+
+          <!-- SECCION 3: Senales de alerta -->
+          <section class="mb-5">
+            <h2 class="blog-section-title">Red Flags to Watch For</h2>
+
+            <p>
+              Train yourself to spot these warning signs in emails and websites:
+            </p>
+
+            <!-- Grilla de tarjetas con senales de alerta -->
+            <div class="row">
+              <!-- row = fila Bootstrap -->
+
+              <!-- Tarjeta 1 -->
+              <div class="col-12 col-sm-6 mb-3">
+                <!-- col-sm-6 = 50% del ancho en pantallas pequenas y mayores -->
+                <!-- mb-3 = margen inferior para separar las tarjetas -->
+
+                <div class="card h-100 border-danger">
+                  <!-- h-100 = altura 100% para que todas las tarjetas sean iguales -->
+                  <!-- border-danger = borde rojo de Bootstrap -->
+
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">Suspicious Sender</h5>
+                    <!-- card-title = titulo de la tarjeta Bootstrap -->
+                    <!-- text-danger = texto rojo -->
+                    <p class="card-text small">
+                      The email address does not match the official domain.
+                      Example: <code>security@nov4bank.com</code> instead of
+                      <code>security@novabank.com</code>
+                      <!-- code = etiqueta HTML para mostrar codigo o texto tecnico en monospace -->
+                    </p>
+                  </div>
+                  <!-- Fin del card-body -->
+                </div>
+                <!-- Fin de la tarjeta -->
+              </div>
+              <!-- Fin col -->
+
+              <!-- Tarjeta 2 -->
+              <div class="col-12 col-sm-6 mb-3">
+                <div class="card h-100 border-danger">
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">Artificial Urgency</h5>
+                    <p class="card-text small">
+                      Phrases like "Act now!", "Within 24 hours", or "Account
+                      suspended" are designed to make you panic and act without
+                      thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 3 -->
+              <div class="col-12 col-sm-6 mb-3">
+                <div class="card h-100 border-danger">
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">Suspicious Links</h5>
+                    <p class="card-text small">
+                      Hover over links before clicking. The URL shown may differ
+                      from where it actually leads. Look for misspellings or
+                      unusual domains.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 4 -->
+              <div class="col-12 col-sm-6 mb-3">
+                <div class="card h-100 border-danger">
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">
+                      Unexpected Attachments
+                    </h5>
+                    <p class="card-text small">
+                      Legitimate banks and companies will never ask you to
+                      download a "security tool" or verify your account by
+                      running a file.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del row de tarjetas -->
+          </section>
+          <!-- Fin de la seccion 3 -->
+
+          <!-- SECCION 4: Como protegerse -->
+          <section class="mb-5">
+            <h2 class="blog-section-title">How to Protect Yourself</h2>
+
+            <!-- Lista sin estilos de puntos -->
+            <ul class="list-unstyled">
+              <!-- list-unstyled = elimina los puntos y el padding de la lista por defecto -->
+
+              <li class="mb-2">
+                <strong>Never download files</strong> from unsolicited emails.
+              </li>
+              <!-- mb-2 = margin-bottom pequeno entre items -->
+
+              <li class="mb-2">
+                <strong>Verify the sender's email address</strong> carefully,
+                character by character.
+              </li>
+
+              <li class="mb-2">
+                <strong>Go directly to the official website</strong> by typing
+                the URL — never through email links.
+              </li>
+
+              <li class="mb-2">
+                <strong>Enable two-factor authentication (2FA)</strong> on all
+                your accounts.
+              </li>
+
+              <li class="mb-2">
+                <strong>Contact your bank directly</strong> if you receive a
+                suspicious security alert.
+              </li>
+
+              <li class="mb-2">
+                <strong>Keep your antivirus updated</strong> and run regular
+                scans.
+              </li>
+            </ul>
+            <!-- Fin de la lista -->
+          </section>
+          <!-- Fin de la seccion 4 -->
+
+          <!-- SECCION 5: El script de mitigacion -->
+          <section class="mb-5">
+            <h2 class="blog-section-title">The Mitigation Script</h2>
+
+            <p>
+              This project also includes <code>app.py</code>, a Python script
+              that demonstrates one way to
+              <strong>detect and remove malware</strong> from a system — the
+              defensive side of the attack lifecycle.
+            </p>
+
+            <p>The script does the following:</p>
+
+            <ul>
+              <!-- ul = lista no ordenada (con puntos) -->
+              <li>
+                Scans a directory for files with suspicious extensions
+                (<code>.exe</code>, <code>.vbs</code>, <code>.bat</code>)
+              </li>
+              <li>Identifies and terminates known malicious process names</li>
+              <li>Logs every action with timestamps for auditability</li>
+            </ul>
+
+            <!-- Bloque de instruccion de ejecucion -->
+            <div class="alert alert-secondary" role="alert">
+              <!-- alert-secondary = variante gris de la alerta Bootstrap -->
+              <code>python app.py</code> — Run with administrator privileges in
+              a VM or sandbox only.
+            </div>
+          </section>
+          <!-- Fin de la seccion 5 -->
+
+          <!-- DISCLAIMER FINAL -->
+          <div class="alert alert-warning" role="alert">
+            <!-- alert-warning = variante amarilla de la alerta Bootstrap -->
+            <strong>Educational Disclaimer:</strong> This entire project —
+            including the phishing page — was created for the course
+            <strong>CLV-0062</strong> at <strong>Universidad Fidelitas</strong>.
+            It is a controlled academic simulation. NovaBank does not exist.
+            Never use these techniques outside of an authorized educational or
+            research context.
+          </div>
+        </div>
+        <!-- Fin de la columna del articulo -->
+      </div>
+      <!-- Fin del row -->
+    </main>
+    <!-- Fin del main -->
+
+    <!-- ================================================
+         FOOTER — Pie de pagina
+         ================================================ -->
+    <footer class="novabank-footer text-center py-3">
+      <!-- novabank-footer = clase propia definida en style.css -->
+      <p class="mb-0 small">
+        <strong>Educational Project</strong> — CLV-0062 | Universidad Fidelitas
+        | orami13
+      </p>
+    </footer>
+    <!-- Fin del footer -->
+
+    <!-- Scripts -->
+    <!-- Se cargan al final del body para mejor rendimiento -->
+
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Bootstrap/popper-->
+    <!-- Popper.js es requerido por Bootstrap 4 para componentes como dropdowns y modals -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Bootstrap/js-->
+    <!-- Bootstrap JS debe cargarse despues de jQuery y Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js/script.js -->
+    <!-- Script propio del proyecto — se carga al ultimo para que jQuery ya este disponible -->
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+  <!-- Fin del body -->
+</html>
+<!-- Fin del documento HTML -->

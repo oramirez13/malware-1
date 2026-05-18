@@ -1,0 +1,174 @@
+/* ================================================
+   style.css — Hoja de estilos compartida
+   Proyecto: NovaBank (Simulacion educativa de phishing)
+   Autor: orami
+   ================================================ */
+
+
+/* ------------------------------------------------
+   VARIABLES GLOBALES
+   :root es un pseudo-selector que representa el elemento raiz del documento (html).
+   Definir variables aqui las hace disponibles en todo el archivo CSS.
+   Para usar una variable: var(--nombre-variable)
+   ------------------------------------------------ */
+:root {
+  --color-novabank: #1a3a5c;      /* Azul oscuro: color principal del banco ficticio */
+  --color-novabank-dark: #122840; /* Azul mas oscuro: para hover y acentos */
+  --color-danger: #c0392b;        /* Rojo intenso: alertas y elementos de urgencia */
+  --color-danger-dark: #992d22;   /* Rojo mas oscuro: para hover en elementos rojos */
+  --color-text: #212529;          /* Gris casi negro: color principal del texto */
+  --color-muted: #6c757d;         /* Gris medio: texto secundario o deshabilitado */
+  --color-bg: #f8f9fa;            /* Gris muy claro: color de fondo general */
+  --color-white: #ffffff;         /* Blanco puro */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Familia de fuentes principal */
+}
+
+
+/* ------------------------------------------------
+   RESET Y BASE GLOBAL
+   Aplica estilos fundamentales a todo el documento.
+   El selector * afecta a TODOS los elementos HTML.
+   ------------------------------------------------ */
+*, *::before, *::after {
+  /* *::before y *::after = tambien afecta a pseudo-elementos CSS */
+  box-sizing: border-box;
+  /* border-box: el padding y border se incluyen dentro del ancho/alto del elemento,
+     evitando desbordamientos inesperados */
+}
+
+body {
+  /* Estilo base del cuerpo de la pagina */
+  font-family: var(--font-main);        /* Familia de fuentes del proyecto */
+  color: var(--color-text);             /* Color de texto por defecto */
+  background-color: var(--color-bg);    /* Color de fondo general de la pagina */
+  display: flex;                        /* Activa el modelo de caja flexible (Flexbox) */
+  flex-direction: column;               /* Apila los elementos hijos en columna (vertical) */
+  min-height: 100vh;                    /* Altura minima = 100% del viewport (pantalla visible) */
+  /* Esto asegura que el footer siempre quede al fondo aunque el contenido sea corto */
+}
+
+main {
+  flex: 1;
+  /* flex: 1 = el main crece para ocupar todo el espacio disponible entre navbar y footer.
+     Esto empuja el footer hacia el fondo de la pagina (sticky footer con flexbox) */
+}
+
+
+/* ------------------------------------------------
+   BARRA DE DISCLAIMER (solo en index.html)
+   Aviso educativo visible en la parte superior de la pagina de phishing.
+   ------------------------------------------------ */
+.disclaimer-bar {
+  background-color: #fff3cd;        /* Amarillo claro: color estandar de advertencia */
+  color: #856404;                   /* Marron/amarillo oscuro: buen contraste sobre fondo amarillo */
+  font-size: 0.85rem;               /* rem = unidad relativa al tamano de fuente raiz (html).
+                                       0.85rem = 85% del tamano base, texto pequeno */
+  border-bottom: 2px solid #ffc107; /* Borde inferior amarillo para delimitar la barra */
+  z-index: 100;                     /* z-index: controla el orden de apilamiento.
+                                       100 = encima de la mayoria de elementos */
+  position: relative;               /* position relative: necesario para que z-index funcione */
+}
+
+
+/* ------------------------------------------------
+   NAVBAR — Barra de navegacion superior
+   Usada en ambas paginas (index.html y blog.html)
+   ------------------------------------------------ */
+.novabank-navbar {
+  background-color: var(--color-novabank); /* Azul oscuro del banco ficticio */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* box-shadow: sombra debajo del navbar
+     valores: offset-x offset-y blur-radius color
+     rgba(0,0,0,0.2) = negro al 20% de opacidad (sombra suave) */
+}
+
+
+/* ------------------------------------------------
+   PAGINA DE PHISHING (index.html)
+   Estilos especificos para la tarjeta de alerta falsa
+   ------------------------------------------------ */
+
+/* Encabezado rojo de la tarjeta de phishing */
+.novabank-header {
+  background-color: var(--color-danger); /* Rojo de alerta/urgencia */
+}
+
+/* Tarjeta principal del phishing */
+.phishing-card {
+  border-radius: 12px;  /* Esquinas redondeadas: valor en pixeles */
+  overflow: hidden;     /* Oculta cualquier contenido que salga de los bordes redondeados */
+}
+
+
+/* ------------------------------------------------
+   BLOG (blog.html)
+   Estilos especificos para la pagina educativa
+   ------------------------------------------------ */
+
+/* Encabezado grande del articulo (hero section) */
+.blog-hero {
+  background-color: var(--color-novabank); /* Mismo azul que el navbar, para coherencia */
+  background-image: linear-gradient(
+    135deg,
+    var(--color-novabank) 0%,
+    var(--color-novabank-dark) 100%
+  );
+  /* linear-gradient: degradado de color
+     135deg = angulo diagonal
+     0% = inicio del degradado (azul medio)
+     100% = final del degradado (azul mas oscuro) */
+}
+
+/* Titulos de cada seccion del articulo */
+.blog-section-title {
+  font-size: 1.4rem;                          /* 1.4 veces el tamano de fuente base */
+  font-weight: 700;                           /* Negrita: 700 = bold en la escala de pesos de fuente */
+  color: var(--color-novabank);               /* Azul del banco para los titulos */
+  border-left: 4px solid var(--color-danger); /* Linea roja a la izquierda del titulo */
+  padding-left: 0.75rem;                      /* Espacio entre la linea y el texto */
+  margin-bottom: 1rem;                        /* Espacio debajo del titulo antes del parrafo */
+}
+
+
+/* ------------------------------------------------
+   FOOTER — Pie de pagina compartido
+   Usado en ambas paginas
+   ------------------------------------------------ */
+.novabank-footer {
+  background-color: var(--color-novabank); /* Azul oscuro coherente con el navbar */
+  color: var(--color-white);               /* Texto blanco sobre fondo oscuro */
+  margin-top: auto;
+  /* margin-top: auto = empuja el footer al fondo cuando el contenido es corto.
+     Funciona junto con display:flex y flex-direction:column del body */
+}
+
+
+/* ------------------------------------------------
+   RESPONSIVIDAD
+   Media queries: reglas CSS que se aplican solo cuando
+   la pantalla cumple ciertas condiciones de tamano.
+   ------------------------------------------------ */
+
+/* Pantallas medianas y grandes (768px o mas) */
+@media (min-width: 768px) {
+  /* @media = regla especial que activa estilos segun condiciones del dispositivo */
+  /* min-width: 768px = se aplica cuando la pantalla tiene 768 pixeles o mas de ancho */
+
+  .blog-hero {
+    padding-top: 4rem;    /* Mas espacio arriba en pantallas grandes */
+    padding-bottom: 4rem; /* Mas espacio abajo en pantallas grandes */
+  }
+}
+
+/* Pantallas pequenas (menos de 576px — telefonos) */
+@media (max-width: 575.98px) {
+  /* max-width: 575.98px = se aplica cuando la pantalla es mas pequena que 576px */
+
+  .blog-hero h1 {
+    font-size: 1.8rem; /* Titulo mas pequeno en telefonos para que no desborde */
+  }
+
+  .blog-hero .lead {
+    font-size: 1rem; /* Texto introductorio mas pequeno en telefonos */
+  }
+}
