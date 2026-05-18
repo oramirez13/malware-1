@@ -46,7 +46,6 @@ NovaBank/
 |
 |-- index.html      # Simulated phishing page (fake NovaBank security alert)
 |-- blog.html       # Educational page: what is phishing and how to detect it
-|-- app.py          # Python script: suspicious file and process remover
 |
 |-- css/
 |   `-- style.css   # Shared stylesheet for index.html and blog.html
@@ -58,9 +57,6 @@ NovaBank/
 |
 `-- README.md       # This file
 ```
-
-> Note on app.py location: This is a standalone Python script, not a Flask application.
-> By Python convention, standalone scripts live in the project root - no subfolder needed.
 
 ---
 
@@ -92,39 +88,6 @@ and page-specific classes where visual differences are needed.
 A single script file used by both pages.
 Handles the phishing warning popup interaction on index.html
 and any interactive elements on blog.html.
-
-### app.py - The Mitigation Script
-
-A Python script that simulates malware removal by:
-
-- Scanning a directory for files with suspicious extensions (.exe, .vbs, .bat, .js)
-- Terminating known malicious process names
-- Logging every action taken with timestamps
-
----
-
-## How to Run app.py
-
-### Requirements
-
-```bash
-pip install psutil
-```
-
-### Execution
-
-```bash
-python app.py
-```
-
-### Important Notes
-
-| Note            | Detail                                                              |
-| --------------- | ------------------------------------------------------------------- |
-| **Permissions** | Administrator/root privileges required to terminate processes       |
-| **OS**          | Designed for Windows. Linux/macOS users must modify file paths      |
-| **Environment** | Always run in a virtual machine or sandbox — never on a real system |
-| **Purpose**     | Demonstration only — targets fictional process names by default     |
 
 ---
 
