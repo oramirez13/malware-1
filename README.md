@@ -66,7 +66,7 @@ NovaBank/
 
 A fake security alert page impersonating NovaBank.
 It mimics the visual style and urgent language used in real phishing attacks.
-When the user clicks the download button, a JavaScript warning appears revealing this is a simulation - the educational moment of the demo.
+When the user clicks the change your password button, a JavaScript warning appears revealing this is a simulation - the educational moment of the demo.
 
 ### blog.html - The Awareness Page
 
