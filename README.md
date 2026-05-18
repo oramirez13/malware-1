@@ -1,6 +1,6 @@
-# NovaBank — Phishing & Malware Awareness Project
+# NovaBank - Phishing & Malware Awareness Project
 
-> WARNING — EDUCATIONAL PURPOSE ONLY
+> WARNING - EDUCATIONAL PURPOSE ONLY
 > This project is a fictional simulation created exclusively for academic and educational purposes.
 > NovaBank does not exist. No real bank, brand, or institution is represented here.
 > The phishing page is intentionally fake. It is designed to demonstrate how phishing attacks work — not to deceive real users.
