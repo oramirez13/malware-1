@@ -12,7 +12,17 @@
 
 <p align="center">
   <strong>Instalación exitosa de XAMPP en Linux</strong><br>
-  <img src="img/technova_laravel_01.png" alt="" width="800"/>
+  <img src="img/novabank_01.png" alt="Phishing simulation" width="800"/>
+</p>
+
+<p align="center">
+  <strong>Instalación exitosa de XAMPP en Linux</strong><br>
+  <img src="img/novabank_02.png" alt="Warning alert" width="800"/>
+</p>
+
+<p align="center">
+  <strong>Instalación exitosa de XAMPP en Linux</strong><br>
+  <img src="img/novabank_03.png" alt="What is phishing?" width="800"/>
 </p>
 
 ---
