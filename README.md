@@ -1,4 +1,4 @@
-# NovaBank - Phishing & Malware Awareness Project
+# NovaBank - Phishing Awareness Simulation
 
 > WARNING - EDUCATIONAL PURPOSE ONLY
 > This project is a fictional simulation created exclusively for academic and educational purposes.
@@ -8,7 +8,7 @@
 
 ---
 
-## NovaBank UI
+## NovaBank UI/UX
 
 <p align="center">
   <strong>Phishing simulation</strong><br>
@@ -29,7 +29,7 @@
 
 ## Project Purpose
 
-This project demonstrates the **full lifecycle of a phishing attack** from an educational perspective:
+This project demonstrates the **common stages used in phishing campaigns** from an educational perspective:
 
 1. **The Bait** - A realistic-looking fake security alert from a fictional bank (NovaBank)
 2. **Awareness** - A page explaining how phishing works and how to detect it
@@ -45,6 +45,16 @@ The goal is to help students and general users understand phishing tactics so th
 It has no affiliation with any real financial institution.
 Any resemblance to real banks, logos, or services is coincidental and unintentional.
 NovaBank exists solely to simulate a realistic phishing scenario for educational demonstration.
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Design
+- DOM Manipulation
 
 ---
 
