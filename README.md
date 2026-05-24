@@ -12,7 +12,7 @@
 
 <p align="center">
   <strong>Instalación exitosa de XAMPP en Linux</strong><br>
-  <img src="img/technova_laravel_01.png" alt="Instalación exitosa de XAMPP en Linux" width="800"/>
+  <img src="img/technova_laravel_01.png" alt="" width="800"/>
 </p>
 
 ---
