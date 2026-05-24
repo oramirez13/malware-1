@@ -11,17 +11,17 @@
 ## NovaBank UI
 
 <p align="center">
-  <strong>Instalación exitosa de XAMPP en Linux</strong><br>
+  <strong>Phishing simulation</strong><br>
   <img src="img/novabank_01.png" alt="Phishing simulation" width="800"/>
 </p>
 
 <p align="center">
-  <strong>Instalación exitosa de XAMPP en Linux</strong><br>
+  <strong>Warning alert</strong><br>
   <img src="img/novabank_02.png" alt="Warning alert" width="800"/>
 </p>
 
 <p align="center">
-  <strong>Instalación exitosa de XAMPP en Linux</strong><br>
+  <strong>What is phishing?</strong><br>
   <img src="img/novabank_03.png" alt="What is phishing?" width="800"/>
 </p>
 
